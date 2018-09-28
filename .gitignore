@@ -1,0 +1,17 @@
+# Can ignore specific files
+.DS_Store
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+target/
+test-output/
+bin/
+*.log
+dtree.txt
+*.hgignore*
+*.lein-repl-history*
+META-INF/
+*.nrepl-port*
+*.lein-failures*
