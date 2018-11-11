@@ -14,7 +14,7 @@ Returns collection of maps as if a relational table format.
 
 usage: 
 
-![alt text](https://github.com/manojarya/flatten-map/blob/master/test/usage-1.png)
+![alt text](https://github.com/manojarya/flatten-map/blob/master/test/flatten-usage.png)
 
 ## License
 
