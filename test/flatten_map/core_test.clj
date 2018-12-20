@@ -19,3 +19,12 @@
           rows (flatten-maps ms ks)]
       (pprint-flatten-maps rows ks)
       (is (= 6 (count rows))))))
+
+
+(deftest test-nested-keys
+  (testing "leaf-node-array-paths-flattening"
+    (let [ms (edn/read-string (slurp (io/resource "test1.edn")))
+          ks ["k1" "k2" "k5.k51" "k5.k52"]
+          rows (flatten-maps ms ks)]
+      (pprint-flatten-maps rows ks)
+      (is (= 2 (count rows))))))

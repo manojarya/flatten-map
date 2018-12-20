@@ -5,8 +5,14 @@
     [clojure.pprint])
   (:gen-class))
 
+(def not-nil? (complement nil?))
+
+(defn get-field-value [context field]
+  (if (not-nil? field)
+    (get-in context (clojure.string/split field #"\.")) nil))
+
 (defn select-values [m ks]
-  (reduce #(conj %1 (m %2)) [] ks))
+  (reduce #(conj %1 (get-field-value m %2)) [] ks))
 
 (defn ks-grp [ks]
   (let [ks-grp (group-by #(clojure.string/includes? % "$") ks)
